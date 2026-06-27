@@ -1,4 +1,5 @@
 def validate_sides(side_1: str, side_2: str) -> tuple[bool, float, float]:
+    """Валидирует стороны из пользовательского ввода"""
     try:
         side_1 = float(side_1)
         side_2 = float(side_2)
