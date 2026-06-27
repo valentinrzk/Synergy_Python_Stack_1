@@ -1,8 +1,8 @@
-def validate_sides(side_1: str, side_2: str) -> tuple[bool, float, float]:
+def validate_sides(side_input_1: str, side_input_2: str) -> tuple[bool, float, float]:
     """Валидирует стороны из пользовательского ввода"""
     try:
-        side_1 = float(side_1)
-        side_2 = float(side_2)
+        side_1 = float(side_input_1)
+        side_2 = float(side_input_2)
     except ValueError:
         return False, 0, 0
 
@@ -13,10 +13,10 @@ def validate_sides(side_1: str, side_2: str) -> tuple[bool, float, float]:
 
 
 def main():
-    side_1 = input("Введите длину первой стороны прямоугольника: ")
-    side_2 = input("Введите длину второй стороны прямоугольника: ")
+    side_input_1 = input("Введите длину первой стороны прямоугольника: ")
+    side_input_2 = input("Введите длину второй стороны прямоугольника: ")
 
-    is_valid, side_1, side_2 = validate_sides(side_1, side_2)
+    is_valid, side_1, side_2 = validate_sides(side_input_1, side_input_2)
 
     if not is_valid:
         print("Ошибка: стороны должны быть положительными числами.")
