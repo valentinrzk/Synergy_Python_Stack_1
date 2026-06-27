@@ -1,17 +1,15 @@
 import pytest
 
-from src.lesson_3 import task_1
-
+from src.lesson_4 import task_1
 from .cases import task_1_cases as cases
 
 
 @pytest.mark.parametrize("case", cases)
-def test_task_1(case, monkeypatch, capsys):
+def test_rectangle(case, monkeypatch, capsys):
     answers = iter(
         [
-            case["pet_type"],
-            str(case["pet_age"]),
-            case["pet_name"],
+            case["side_1"],
+            case["side_2"],
         ]
     )
 

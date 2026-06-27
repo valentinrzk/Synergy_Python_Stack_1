@@ -1,10 +1,10 @@
 import pytest
 
 from src.lesson_3 import task_2
-from .cases import task_2_cases
+from .cases import task_2_cases as cases
 
 
-@pytest.mark.parametrize("case", task_2_cases)
+@pytest.mark.parametrize("case", cases)
 def test_task_2(case, monkeypatch, capsys):
     answers = iter(
         [
