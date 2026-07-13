@@ -1,10 +1,6 @@
 def shift_numbers(
-    numbers: list[int],
-    numbers_count: int | None = None,
+    numbers: list[int]
 ) -> list[int]:
-    if not validate_numbers_count(numbers, numbers_count):
-        raise ValueError("Количество чисел не соответствует заявленному.")
-
     if not numbers:
         return []
 
@@ -16,19 +12,15 @@ def shift_numbers(
     return shifted_numbers
 
 
-def validate_numbers_count(numbers: list[int], numbers_count: int | None) -> bool:
-    if numbers_count is None:
-        return True
-
-    return numbers_count == len(numbers)
-
-
 def main():
     numbers_count = int(input("Введите количество чисел: "))
 
     numbers = [int(number) for number in input("Введите числа через пробел: ").split()]
 
-    print(*shift_numbers(numbers, numbers_count))
+    if numbers_count != len(numbers):
+        raise ValueError("Количество чисел не соответствует заявленному.")
+
+    print(*shift_numbers(numbers))
 
 
 if __name__ == "__main__":

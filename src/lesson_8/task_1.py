@@ -12,7 +12,7 @@ def main():
 
     numbers = []
 
-    for _ in range(numbers_count):
+    for num in range(numbers_count):
         numbers.append(int(input("Введите число: ")))
 
     print(*reverse_numbers(numbers))
