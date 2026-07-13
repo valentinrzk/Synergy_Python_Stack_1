@@ -1,6 +1,7 @@
 import pytest
 
 from src.lesson_7 import task_1
+
 from .cases import task_1_cases as cases
 
 
