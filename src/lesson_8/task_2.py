@@ -1,6 +1,4 @@
-def shift_numbers(
-    numbers: list[int]
-) -> list[int]:
+def shift_numbers(numbers: list[int]) -> list[int]:
     if not numbers:
         return []
 

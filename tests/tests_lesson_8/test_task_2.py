@@ -12,4 +12,3 @@ def test_shift_numbers(case):
         )
         == case["result"]
     )
-
