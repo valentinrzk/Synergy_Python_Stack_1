@@ -9,6 +9,7 @@ authors = [
 ]
 dependencies = [
     "pydantic>=2.13.4",
+    "pynput>=1.8.2",
     "pytest>=9.1.1",
     "ruff>=0.15.14",
     "ty>=0.0.43",
@@ -18,6 +19,8 @@ dependencies = [
 [tool.ruff]
 target-version = "py313"
 line-length = 100
+extend-exclude = ["src/lesson_23"]
+force-exclude = true
 
 [tool.ruff.lint]
 select = [
@@ -72,6 +75,10 @@ testpaths = ["tests"]
 addopts = [
 "--strict-markers",
 ]
+
+# ===== TY =====
+[tool.ty.src]
+exclude = ["src/lesson_23"]
 
 [tool.setuptools]
 package-dir = {"" = "src"}
